@@ -1,5 +1,8 @@
 #include <iostream>
 #include <cmath>
+#include <vector>
+
+using namespace std;
 
 static const double pi = atan(1) * 4;
 
@@ -35,9 +38,11 @@ public:
 		ComplexNum r = ComplexNum(real_part, imag_part);
 		return r;
 	}
-	void print()
+	string print()
 	{
-		std::cout << std::endl << real << " + j * " << imag << std::endl;
+		//std::cout << std::endl << real << " + j * " << imag << std::endl;
+		string s = to_string(real) + " + j * " + to_string(imag);
+		return s;
 	}
 };
 
@@ -47,7 +52,8 @@ inline ComplexNum complexExp(double a)
 	return r;
 }
 
-inline ComplexNum* dft(double* x, int size)
+//inline ComplexNum* dft(double* x, int size)
+inline ComplexNum* dft(vector <double> x, int size)
 {
 	//int size = sizeof(x) / sizeof(double);
 	ComplexNum* X = new ComplexNum[size];
