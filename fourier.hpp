@@ -40,7 +40,6 @@ public:
 	}
 	string print()
 	{
-		//std::cout << std::endl << real << " + j * " << imag << std::endl;
 		string s = to_string(real) + " + j * " + to_string(imag);
 		return s;
 	}
@@ -52,13 +51,8 @@ inline ComplexNum complexExp(double a)
 	return r;
 }
 
-//inline ComplexNum* dft(double* x, int size)
-//inline ComplexNum* dft(vector <double> x, int size)
 inline vector <ComplexNum> dft(vector <double> x, int size = 0)
 {
-	//int size = sizeof(x) / sizeof(double);
-	//ComplexNum* X = new ComplexNum[size];
-	//ComplexNum W = complexExp(-2 * pi / size);
 	if (size == 0) size = x.size();
 	vector <ComplexNum> out;
 	ComplexNum c;
@@ -69,11 +63,8 @@ inline vector <ComplexNum> dft(vector <double> x, int size = 0)
 		for (int n = 0; n < size; n++)
 		{
 			c = c + complexExp(-2 * pi * n * k / size) * x[n];
-			//X[k] = X[k] + complexExp(-2 * pi * n * k / size) * x[n];
-
 		}
 		out.push_back(c);
 	}
 	return out;
-	//return X;
 }

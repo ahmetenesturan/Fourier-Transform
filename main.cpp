@@ -10,7 +10,6 @@ using namespace std;
 int main()
 {
 	int menu_input = 0;
-	//string dummy;
 	while (true)
 	{
 		std::cout << "Welcome to the Fourier Transformer, please select an option to continue:" << endl;
@@ -24,8 +23,6 @@ int main()
 		}
 		if(menu_input == 1)
 		{
-			//std::cout << endl << "Please put your input file as \"input.txt\" to the program directory and press any button the continue..." << endl;
-			//cin >> dummy;
 			string line;
 			ifstream in_file("input.txt");
 			ofstream out_file("output.txt", ios::trunc);
