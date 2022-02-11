@@ -53,17 +53,27 @@ inline ComplexNum complexExp(double a)
 }
 
 //inline ComplexNum* dft(double* x, int size)
-inline ComplexNum* dft(vector <double> x, int size)
+//inline ComplexNum* dft(vector <double> x, int size)
+inline vector <ComplexNum> dft(vector <double> x, int size = 0)
 {
 	//int size = sizeof(x) / sizeof(double);
-	ComplexNum* X = new ComplexNum[size];
+	//ComplexNum* X = new ComplexNum[size];
 	//ComplexNum W = complexExp(-2 * pi / size);
+	if (size == 0) size = x.size();
+	vector <ComplexNum> out;
+	ComplexNum c;
 	for (int k = 0; k < size; k++)
 	{
+		c.real = 0;
+		c.imag = 0;
 		for (int n = 0; n < size; n++)
 		{
-			X[k] = X[k] + complexExp(-2 * pi * n * k / size) * x[n];
+			c = c + complexExp(-2 * pi * n * k / size) * x[n];
+			//X[k] = X[k] + complexExp(-2 * pi * n * k / size) * x[n];
+
 		}
+		out.push_back(c);
 	}
-	return X;
+	return out;
+	//return X;
 }
