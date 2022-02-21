@@ -1,9 +1,9 @@
 #include <iostream>
 #include <fstream>
-#include <cmath>
 #include <string>
 #include <vector>
-#include "fourier.hpp"
+#include "complex.h"
+#include "fourier.h"
 
 using namespace std;
 

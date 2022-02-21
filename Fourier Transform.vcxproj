@@ -117,6 +117,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AssemblerOutput>AssemblyAndSourceCode</AssemblerOutput>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -140,7 +141,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="fourier.hpp" />
+    <ClInclude Include="complex.h" />
+    <ClInclude Include="fourier.cpp" />
+    <ClInclude Include="fourier.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
