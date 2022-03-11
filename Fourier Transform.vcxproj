@@ -142,7 +142,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="complex.h" />
-    <ClInclude Include="fourier.cpp" />
     <ClInclude Include="fourier.h" />
   </ItemGroup>
   <ItemGroup>

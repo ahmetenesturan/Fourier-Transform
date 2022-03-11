@@ -5,7 +5,11 @@
 #include "complex.h"
 #include "fourier.h"
 
-using namespace std;
+using std::cout;
+using std::cin;
+using std::endl;
+using std::string;
+using std::vector;
 
 int main()
 {
@@ -24,8 +28,8 @@ int main()
 		if(menu_input == 1)
 		{
 			string line;
-			ifstream in_file("input.txt");
-			ofstream out_file("output.txt", ios::trunc);
+			std::ifstream in_file("input.txt");
+			std::ofstream out_file("output.txt", std::ios::trunc);
 			vector <double> in;
 
 			while (getline(in_file, line)) in.push_back((stod(line)));
