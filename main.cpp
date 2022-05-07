@@ -2,8 +2,8 @@
 #include <fstream>
 #include <string>
 #include <vector>
-#include "complex.h"
-#include "fourier.h"
+#include "complex.hpp"
+#include "fourier.hpp"
 
 using std::cout;
 using std::cin;
