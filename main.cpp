@@ -23,6 +23,7 @@ int main()
 		if (menu_input == 0)
 		{
 			cout << "Ahmet Enes TURAN";
+			//exp(ComplexNum(1,1)).print();
 			break;
 		}
 		if(menu_input == 1)
